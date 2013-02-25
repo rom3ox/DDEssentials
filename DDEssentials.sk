@@ -1,0 +1,33 @@
+# a simple ID command to get the id of the held item
+command /id <item=%tool%>:
+	description: Find the ID of the item you're holding, or any given one.
+	permission: DD.Essentials.CMD.id
+	usage: /id [type]
+	executable by: players
+	trigger:
+		message "En uso: El id de %arg 1% es %id of arg 1%"
+		message "En mira: El id de %targeted block% es %id of targeted block%"
+
+command /heal:
+	description: heals yourself completely
+	permission: DD.Essentials.CMD.Heal
+	executable by: players
+	aliases: curar
+	trigger:
+		heal player
+
+command /feed:
+	description: Use this command when you're hungry and magic will happen!
+	permission: DD.Essentials.CMD.feed
+	aliases: comer
+	executable by: players
+	trigger:
+		set food meter of player to 20
+		
+#command /inv <player>:
+#	description: Open the inventory of a player
+#	permission: DD.Essentials.CMD.inv
+#	aliases: inventario
+#	executable by: players
+#	trigger:
+#		open %inventory% to %player%
